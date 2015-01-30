@@ -1,0 +1,710 @@
+/* ----------------------------------
+ * Lists
+ * ---------------------------------- */
+
+.outros {
+    width: 100%;
+    height: 10em;
+    position:relative;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -3.2rem;
+    border-radius: 3px 3px 0px 0px;
+   
+    
+}
+
+a{
+  text-decoration: none;
+}
+
+[data-type="list"] {
+  font-weight: 400;
+  padding: 0 1.5rem;
+}
+
+[data-type="list"] ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+    
+}
+
+
+[data-type="list"] strong {
+  font-weight: 500;
+}
+
+/* Title divisors */
+[data-type="list"] header {
+  padding: 0 1.5rem;
+  margin: 0;
+  font-size: 1.6rem;
+  height: 3rem;
+  line-height: 4rem;
+  font-weight: normal;
+  color: #ff4e00;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Pressed State */
+li a:active {
+  background-color: transparent; /* remove default color for active state */
+}
+
+[data-type="list"].active li:after,
+[data-type="list"] li > a:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+ margin-left:0px;
+  top: 0;
+  right: -1.5rem;
+  bottom: 0;
+  z-index: 3;
+}
+
+[data-type="list"].active li:active:after,
+[data-type="list"].active li:hover:after,
+[data-type="list"] li > a:active:after,
+[data-type="list"] li > a:hover:after {
+  background-color: rgba(0,213,255,0.3);
+}
+
+/* Disabled */
+[data-type="list"] li[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.2;
+  border-color: #888;
+}
+
+/* Graphic content */
+[data-type="list"] aside {
+  float: left;
+  margin: 0 0.5rem 0 0;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  border-radius: 3px 3px 0px 0px;
+}
+
+[data-type="list"] aside.pack-end {
+width: 100%;
+  text-align: right;
+  position: absolute;
+}
+
+[data-type="list"] li > a aside,
+[data-type="list"] li > a aside.icon {
+  background-color: transparent;
+  z-index: -1;
+}
+
+[data-type="list"] aside.icon {
+  width: 3rem;
+  height: 6rem;
+  background: #fff no-repeat left center / 100% auto;
+  font-size: 0;
+  display: block;
+  overflow: hidden;
+}
+
+
+/* Text content */
+[data-type="list"] li .p-nome {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  margin: 0px;
+  color: #3b3b3b;
+  width: 60%;
+  line-height: 2rem;
+  list-style: none;
+  font-size:18px;
+  padding-top:5px;
+  padding-left: 8px;
+}
+
+a{
+  list-style: none;
+}
+
+li .p-l {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: none;
+  margin: 0px;
+  color: #5a5a5a;
+  width: 60%;
+  line-height: 2rem;
+  list-style: none;
+  font-size:17px;
+  padding-top:1px;
+  padding-left: 8px;
+}
+
+[data-type="list"] li p em {
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+[data-type="list"] li p time {
+  margin-right: 0.3rem;
+  text-transform: uppercase;
+}
+
+/* Checkable content */
+[data-type="list"] li > .pack-checkbox,
+[data-type="list"] li > .pack-radio,
+[data-type="list"] li > .pack-switch {
+  pointer-events: none;
+  position: absolute;
+  top: -0.1rem;
+  bottom: 0;
+  right: 0;
+  left: -4rem;
+  z-index: 1;
+  width: auto;
+  height: auto;
+    
+}
+
+[data-type="list"] li > .pack-checkbox input ~ span:after,
+[data-type="list"] li > .pack-radio input ~ span:after,
+[data-type="list"] li > .pack-switch input ~ span:after {
+  left: 0;
+  margin-left: 0;
+}
+
+/* Edit mode */
+[data-type="list"] [data-type="edit"] li {
+  padding-left: 4rem;
+}
+
+[data-type="list"] [data-type="edit"] li > .pack-checkbox,
+[data-type="list"] [data-type="edit"] li > .pack-radio,
+[data-type="list"] [data-type="edit"] li > .pack-switch {
+  pointer-events: auto;
+  left: 0;
+}
+
+[data-type="list"] [data-type="edit"] li > a:active:after,
+[data-type="list"] [data-type="edit"] li > a:hover:after {
+  display: none;
+}
+
+[data-type="list"] [data-type="edit"] aside.pack-end {
+  display: none;
+}
+
+/* Themes */
+.skin-comms [data-type="list"] header {
+  color: #4997a7;
+}
+
+/*-------------------- TELA DE EVENTOS------------------------------------------- */
+
+/*------------- css eventos-----------*/
+
+[data-type="list"] .item-list{
+   list-style: none;
+    padding: 0px;
+    border:solid 1px #c1c1c1;
+    margin: 10px 2% 1em 2%;
+    width: 96%;
+    border-radius: 3px 3px 0px 0px;
+    box-shadow: ;
+    position: relative2
+      
+}
+
+.lista-eventos
+{
+    height: 22em;
+    list-style: none;
+    padding: 0px;
+    margin: 10px 2% 2em 2%;
+    width: 96%;
+    border-radius: 3px 3px 0px 0px;
+    box-shadow: 0px 0px 1px 0.1px;
+    position: relative;
+}
+
+.lista-h
+{
+  height: 13.4em;
+}
+
+.eventos
+{
+  
+  width: 100%;
+  height: 18.5em;
+  border-radius: 3px 3px 0px 0px;
+  margin-top: -3rem;
+}
+
+[data-type="list"] li:last-child {
+  border: none;
+}
+/*----------- LISTA EVENTOS-------------*/
+ [data-type="list"] aside span[data-type=img],
+[data-type="list"] aside .eventos {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 6em;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 0.1rem #dedede;
+  border-bottom: solid 0.1rem #e7e7e7;
+  background: transparent center center / cover;
+  position: relative;
+  z-index: 1;
+
+  /* Favor performance over quality */
+  image-rendering: -moz-crisp-edges;
+}
+
+
+
+
+
+
+
+
+/*---------------------------css templete transporte-------------------------------*/
+
+[data-type="list"] #transporte {
+  width: 100%;
+  height: 6rem;
+  box-sizing: border-box;
+  border-bottom: solid 0.1rem #e7e7e7;
+  color: #333;
+  margin: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+ margin-bottom: -0.1rem;
+}
+
+[data-type="list"] li:last-child {
+  border: none;
+}
+
+
+
+
+[data-type="list"] aside span[data-type=img],
+[data-type="list"] .img-transporte {
+  position: absolute;
+  width: 6rem;
+  height: 5.5rem;
+  margin-top: 0.2rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 0.1rem #dedede;
+  z-index: 1;
+  border-radius: 6px;
+      
+    
+  /* Favor performance over quality */
+  image-rendering: -moz-crisp-edges;
+}
+
+
+
+[data-type="list"] aside span[data-type=img],
+[data-type="list"] aside .img-telefone {
+  position: absolute;
+  right: ;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 3rem;
+  box-sizing: border-box;
+  background: transparent center center / cover;
+  position: relative;
+  z-index: 1;
+
+  /* Favor performance over quality */
+  image-rendering: -moz-crisp-edges;
+}
+
+[data-type="list"] li .nome:first-of-type {
+  font-size: 1.7rem;
+  margin-top: 1px; 
+  line-height: 2rem;
+  margin-left: 8rem;
+  color: black;
+  padding:3px 0 0;
+  display: block;
+  width: 15rem;
+}
+
+[data-type="list"] li .numero {
+  margin-left: 7rem;
+  border: none;
+  display: block;
+  color: #858585;
+  margin-top: -2px;
+  font-size: 1.3rem;
+  display: block;
+  width: 15rem;
+}
+
+*/
+
+
+
+
+
+
+li
+{
+border-bottom:solid  1px #c1c0c0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------CSS NOVOS *____* -----------------------*/
+
+
+/*-----------------------------CSS DE ULTILIDADES EMCIMA DO CODIGO DO  <<<TEMPLETE DE PONTOS>>>>-------------------------*/
+
+[data-type="list"] #segunda-lista-ultilidades{
+  width: 96%;
+  height: 7rem;
+  box-sizing: border-box;
+  border-bottom: solid 0.1rem #bcbcbc;
+  color: #333;
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-left: 2%;
+
+}
+
+.loader-img
+{
+width: 3rem;
+height: 3rem;
+float: right;
+}
+
+.loader-D
+{
+width: 4rem;
+height: 4rem;
+position: fixed;
+
+}
+
+.loader-img-S
+{
+width: 3rem;
+height: 3rem;
+float: right;
+margin-top: -207px;
+margin-right: 7px;
+}
+
+.loader-img-H
+{
+width: 3rem;
+height: 3rem;
+margin-right: 7px;
+float: right;
+}
+
+
+[data-type="list"] li:last-child {
+  border: none;
+}
+
+
+[data-type="list"] aside span[data-type=img],
+[data-type="list"] .img-teste {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  margin-top: 1rem;
+  box-sizing: border-box;
+  box-shadow: ;
+  z-index: 1;
+  border-radius: 6px;
+      
+    
+  image-rendering: -moz-crisp-edges;
+}
+
+
+[data-type="list"] aside span[data-type=img],
+[data-type="list"] aside .arrow {
+  position: absolute;
+  right: ;
+  width: rem;
+  height: 2rem;
+  margin-top: 1.7rem;
+  box-sizing: border-box;
+  background: transparent center center / cover;
+  position: relative;
+  z-index: 1;
+
+
+  image-rendering: -moz-crisp-edges;
+}
+
+[data-type="list"] li .nome-teste:first-of-type {
+  font-size: 2.5rem;
+  margin-top: 1px; 
+  line-height: 2rem;
+  margin-left: 8rem;
+  color: black;
+  padding:3px 0 0;
+  display: block;
+  width: 15rem;
+}
+
+
+
+
+
+/*-----------------------------CSS DE ULTILIDADES EMCIMA DO CODIGO DO  <<<TEMPLETE DE TRANPORTE>>>>-------------------------*/
+
+
+[data-type="list"] #pago-dois {
+  width: 100%;
+  height: 6rem;
+  box-sizing: border-box;
+  border-bottom: solid 0.1rem #e7e7e7;
+  color: #333;
+  margin: 0;
+  display: block;
+  position: relative;
+  z-index: 1;
+ margin-bottom: -0.1rem;
+}
+
+[data-type="list"] li:last-child {
+  border: none;
+}
+
+
+
+[data-type="list"] aside span[data-type=img],
+[data-type="list"] .icon-telefone {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 3rem;
+  box-sizing: border-box;
+  z-index: 1;
+  border-radius: 6px;
+      
+    
+  /* Favor performance over quality */
+  image-rendering: -moz-crisp-edges;
+}
+
+
+
+[data-type="list"] aside span[data-type=img],
+[data-type="list"] aside .img-pago-dois{
+  margin-top: 0.2rem; 
+  position: absolute;
+  right:0px ;
+  width: 7.5rem;
+  height: 6.5rem;
+  box-shadow: 0 0 0 0.1rem #dedede;
+  box-sizing: border-box;
+  background: transparent center center / cover;
+  position: relative;
+  z-index: 1;
+
+  /* Favor performance over quality */
+  image-rendering: -moz-crisp-edges;
+}
+
+[data-type="list"] li .nome-pago-dois:first-of-type {
+  font-size: 1.7rem;
+  margin-top: 1px; 
+  line-height: 2rem;
+  margin-left: 0rem;
+  color: black;
+  padding:3px 0 0;
+  display: block;
+  width: 15rem;
+}
+
+
+
+[data-type="list"] li .numero-pago-dois {
+  margin-left: 1rem;
+  border: none;
+  display: block;
+  color: #858585;
+  margin-top: -2px;
+  font-size: 1.3rem;
+  display: block;
+  width: 15rem;
+}
+/*------CSS DA LISTAGEM GRATIS*-------*/
+
+
+[data-type="list"] li .nome-pago-dois:first-of-type {
+  font-size: 1.7rem;
+  margin-top: 1px;
+  margin: 0px;
+  line-height: 2rem;
+  margin-left: 0rem;
+  color: #262424;
+  padding:3px;
+  width: 15rem;
+}
+
+[data-type="list"] li .numero-pago-dois {
+  margin-left: 3rem;
+  border: none;
+  display: block;
+  color: #858585;
+  margin-top: -.2em;
+  font-size: 1.3rem;
+  margin-bottom: 0px;
+  margin-top: -5px;
+  border: none;
+  width: 15rem;;
+}
+
+
+
+/*------CSS DA LISTAGEM GRATIS*-------*/
+
+[data-type="list"] li .nome-gratis:first-of-type {
+  font-size: 1.5rem;
+  margin-top: 1px; 
+  line-height: 2rem;
+  margin-left: 0rem;
+  color: #262424;
+  padding:3px 0 0;
+  display: block;
+  width: 15rem;
+}
+
+[data-type="list"] li .numero-gratis {
+ margin-left: 3rem;
+display: block;
+color: #858585;
+font-size: 1.3rem;
+margin-top: -20px;
+border: medium none;
+width: 15rem;
+}
+
+[data-type="list"] li .numero-gratis-um {
+ margin-left: 3rem;
+display: block;
+color: #858585;
+font-size: 1.3rem;
+margin-bottom: 15px;
+margin-top: -20px;
+border: medium none;
+width: 15rem;
+}
+
+
+
+/*---------------------------ICON DA TELA DE SOBRE CABRALIA---------------------------*/
+form
+{
+border-bottom: solid 5rem white;
+ 
+}
+
+#footer-sobre
+{
+background: rgba(0, 0, 0, 0.58);
+margin: 0px;
+position:absolute;
+width: 100%;
+height:5rem;
+margin-top: 0rem;
+text-align: center;
+}
+#icon-maps
+{
+margin-bottom: 2px;
+z-index: 3;
+width: 4.5rem;
+margin-left:0.5rem;
+height:4.5rem;
+margin-top: -3rem;
+}
+
+#icon-youtube
+{
+margin-bottom: 0px;
+z-index: 3;
+width: 4.6rem;
+margin-right:1.5rem;
+height:4.7rem;
+margin-bottom:1px; 
+margin-top: 0.2rem;
+}
+
+.mais
+{
+    width: 4.6em;
+    height: 1.5em;
+    background:#009688;
+    position:relative;
+    float:right;
+    margin-top: -2.3em;
+    margin-right: 10px;
+    color:white;
+    padding: 8px 0px 0px 0px;
+    text-align: center;
+    border-radius:3px;
+    font-size: 18px;
+    z-index: 3;
+    
+}
+
+.mais-evento
+{
+    width: 4.5em;
+    height: 1.5em;
+    background:#009688;
+    position:relative;
+    float:right;
+    margin-top: -2.2em;
+    margin-right: 10px;
+    color:white;
+    padding: 9px 0px 0px 0px;
+    text-align: center;
+    border-radius:3px;
+    font-size: 18px;
+    z-index: 3;
+    
+}
+
+
