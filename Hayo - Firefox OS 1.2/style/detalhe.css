@@ -334,3 +334,16 @@ height:5rem;
 background:;
 text-align: center;
 }
+ 
+.span-tel
+{
+    width: 6rem;
+    height: 6rem;
+    border-radius:7rem;
+    bottom: 7px;
+    right: 7px;
+    position: absolute;
+    background: #4caf50;
+    z-index: 4;
+    position: fixed;
+}
